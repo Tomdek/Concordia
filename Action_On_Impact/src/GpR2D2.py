@@ -21,8 +21,7 @@ interval = 1
 thresholdSumLow = .5
 thresholdSumHigh = 1.5
 
-xl = XLoBorg
-xl.init()
+XLoBorg.init()
 
 #Method: play sound file
 def playSound(filename):
@@ -33,7 +32,7 @@ def playSound(filename):
 
 #Loop indefinitely
 try:
-    x, y, z = xl.ReadAccelerometer()
+    x, y, z = XLoBorg.ReadAccellerometer()
     moveSum = x + y + z
     print(moveSum)
     
