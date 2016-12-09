@@ -10,7 +10,8 @@ import os
 
 #declare variables
 SOUND_PATH = "/home/pi/XLoBorg/Concordia/Action_On_Impact/src/" #path to folder containing sound files
-soundOne = 'R2D2.wav' #name of sound file
+NUMBER_OF_SOUNDS = 6 #numer of sound files, number used for RNG
+soundOne = 'R2D2.wav' #name of sound file add as many as you specify in NUMBER_OF_SOUNDS
 soundTwo = 'R2D2a.wav'
 soundThree = 'R2D2b.wav'
 soundFour = 'R2D2c.wav'
@@ -20,6 +21,8 @@ interval = 1
 thresholdSumLow = .5
 thresholdSumHigh = 1.5
 
+XLoBorg.init()
+
 #Method: play sound file
 def playSound(filename):
     #command = 'bash -c "aplay %s &> /dev/null &"' % (filename)
@@ -27,20 +30,19 @@ def playSound(filename):
     os.system(command)
     print("sound file played :mood:yaaaay")
 
-#try:
-playSound(soundOne)
-playSound(soundTwo)
-playSound(soundThree)
-playSound(soundFour)
-playSound(soundFive)
-playSound(soundSix)
-    #Loop indefinitely
-    #check for changes
-        #get sensor data
+#Loop indefinitely
+try:
+    x, y, z = XLOBorg.ReadAccelerometer()
+    moveSum = x + y + z
+    print(moveSum)
+    
+    if thresholdSumLow <= moveSum <= thresholdSumHigh:
+        playSound(soundOne)
+        print("movement within threshold")        
+
             #log it
-            #if 'hit' detected 
             #play random sound
-#Exception KeyboardInterrupt:
-#    pass
+Exception KeyboardInterrupt:
+    pass
 
 #Log data 
