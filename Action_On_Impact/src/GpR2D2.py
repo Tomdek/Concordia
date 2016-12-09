@@ -17,7 +17,7 @@ thresholdSumHigh = 1.5
 #Method: play soundfile
 def playSound(filename):
     #command = 'bash -c "aplay %s &> /dev/null &"' % (filename)
-    command = "aplay /XLoBorg/Concordia/Action_On_Impact/src/" + filename
+    command = "aplay /home/pi/XLoBorg/Concordia/Action_On_Impact/src/" + filename
     os.system(command)
     print("soundfile played :mood:hopefuller...")
 
