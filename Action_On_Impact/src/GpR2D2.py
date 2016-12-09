@@ -32,7 +32,7 @@ def playSound(filename):
 
 #Loop indefinitely
 try:
-    x, y, z = XLOBorg.ReadAccelerometer()
+    x, y, z = XLoBorg.ReadAccelerometer()
     moveSum = x + y + z
     print(moveSum)
     
@@ -42,7 +42,7 @@ try:
 
             #log it
             #play random sound
-Exception KeyboardInterrupt:
+except KeyboardInterrupt:
     pass
 
 #Log data 
