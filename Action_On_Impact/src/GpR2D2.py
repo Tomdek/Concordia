@@ -21,7 +21,7 @@ interval = 1
 thresholdSumLow = .5
 thresholdSumHigh = 1.5
 
-xl = XLoBorg.XLoBorg
+xl = XLoBorg
 xl.init()
 
 #Method: play sound file
