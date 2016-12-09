@@ -9,7 +9,7 @@ import time
 import os
 
 #declare variables
-
+print("Updating Check") #TEMP
 #Loop indefinitely
 #check for changes
     #get sensor data
