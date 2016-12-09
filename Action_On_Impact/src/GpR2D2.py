@@ -9,14 +9,26 @@ import time
 import os
 
 #declare variables
-print("Updating Check") #TEMP
-#Loop indefinitely
-#check for changes
-    #get sensor data
-        #log it
-    #if 'hit' detected 
-        #play random sound
+soundOne = './sound/R2D2.wav'
+interval = 1
+thresholdSumLow = .5
+thresholdSumHigh = 1.5
 
 #Method: play soundfile
+def playSound(filename):
+    command = 'bash -c "aplay %s &> /dev/null &"' % (filename)
+    os.system(command)
+    print("soundfile played")
+
+#try:
+playSound(soundOne)
+    #Loop indefinitely
+    #check for changes
+        #get sensor data
+            #log it
+            #if 'hit' detected 
+            #play random sound
+#Exception KeyboardInterrupt:
+#    pass
 
 #Log data 
