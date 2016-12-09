@@ -21,8 +21,6 @@ interval = 1
 thresholdSumLow = .5
 thresholdSumHigh = 1.5
 
-XLoBorg.init()
-
 #Method: play sound file
 def playSound(filename):
     #command = 'bash -c "aplay %s &> /dev/null &"' % (filename)
