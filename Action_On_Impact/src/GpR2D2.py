@@ -9,16 +9,17 @@ import time
 import os
 
 #declare variables
-soundOne = './sound/R2D2.wav'
+soundOne = 'R2D2.wav'
 interval = 1
 thresholdSumLow = .5
 thresholdSumHigh = 1.5
 
 #Method: play soundfile
 def playSound(filename):
-    command = 'bash -c "aplay %s &> /dev/null &"' % (filename)
+    #command = 'bash -c "aplay %s &> /dev/null &"' % (filename)
+    command = "aplay " + filename
     os.system(command)
-    print("soundfile played")
+    print("soundfile played :mood:hopeful")
 
 #try:
 playSound(soundOne)
